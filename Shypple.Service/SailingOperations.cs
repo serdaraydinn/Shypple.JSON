@@ -66,10 +66,6 @@ namespace Shypple.Service
         {
             List<SailingOutput> result = getSailings(rootObject);
 
-            var x = result.OrderBy(r => (r.ArrivalDate - r.DepartureDate).TotalDays).GroupBy(x => new { x.OriginPort, x.DestinationPort })
-                         .Select(grp => grp.ToList())
-                         .FirstOrDefault();
-
             return result.OrderBy(r => (r.ArrivalDate - r.DepartureDate).TotalDays).GroupBy(x => new { x.OriginPort, x.DestinationPort })
                          .Select(grp => grp.ToList())
                          .FirstOrDefault();
