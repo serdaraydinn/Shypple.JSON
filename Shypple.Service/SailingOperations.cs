@@ -47,14 +47,14 @@ namespace Shypple.Service
         {
             List<SailingOutput> sailings = getSailings(rootObject);
 
-            return sailings.Aggregate((r1, r2) => r1.Rate < r2.Rate ? r1 : r2); ;
+            return sailings.Aggregate((r1, r2) => r1.RateEUR < r2.RateEUR ? r1 : r2); ;
         }
 
         public List<SailingOutput> GetCheapestSailingLegs(Root rootObject)
         {
             List<SailingOutput> result = getSailings(rootObject);
 
-            var x = result.OrderBy(r => r.Rate)
+            var x = result.OrderBy(r => r.RateEUR)
                          .GroupBy(x => new { x.OriginPort, x.DestinationPort })
                          .Select(grp => grp.ToList())
                          .FirstOrDefault();
