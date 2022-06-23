@@ -32,6 +32,7 @@ namespace Shypple.Service
             return result;
         }
 
+        //Calculates EUR rate with using departureDate and rateCurrency
         private double getRateEUR(DateTimeOffset departureDate, string rateCurrency, List<ExchangeRate> exchangeRatesList)
         {
             double exchangeRate = exchangeRatesList.First(x => x.ExchangeDate == departureDate).ExchangeRateDetails
@@ -46,8 +47,9 @@ namespace Shypple.Service
         public SailingOutput GetCheapestDirectSailing(Root rootObject)
         {
             List<SailingOutput> sailings = getSailings(rootObject);
+            var result = sailings.Aggregate((r1, r2) => r1.RateEUR < r2.RateEUR ? r1 : r2);
 
-            return sailings.Aggregate((r1, r2) => r1.RateEUR < r2.RateEUR ? r1 : r2); ;
+            return result;
         }
 
         public List<SailingOutput> GetCheapestSailingLegs(Root rootObject)
@@ -66,10 +68,11 @@ namespace Shypple.Service
         {
             List<SailingOutput> result = getSailings(rootObject);
 
-            return result.OrderBy(r => (r.ArrivalDate - r.DepartureDate).TotalDays).GroupBy(x => new { x.OriginPort, x.DestinationPort })
+            var x = result.OrderBy(r => (r.ArrivalDate - r.DepartureDate).TotalDays).GroupBy(x => new { x.OriginPort, x.DestinationPort })
                          .Select(grp => grp.ToList())
                          .FirstOrDefault();
 
+            return x;
         }
 
     }

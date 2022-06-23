@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shypple.Model", "Shypple.Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shypple.Service", "Shypple.Service\Shypple.Service.csproj", "{1AE7D4F9-E69F-43C8-92D8-AC689AF70FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shypple.Interface", "Shypple.Interface\Shypple.Interface.csproj", "{BACC2CAA-7D45-40FA-B4AE-D38418EE25E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shypple.Interface", "Shypple.Interface\Shypple.Interface.csproj", "{BACC2CAA-7D45-40FA-B4AE-D38418EE25E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shypple.Test", "Shypple.Test\Shypple.Test.csproj", "{95FE3CFF-3762-4446-8690-EB2BC5321EC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shypple.Tests", "Shypple.Tests\Shypple.Tests.csproj", "{CE1CD672-B9D7-4ECD-8F75-AE6DF259F8F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{BACC2CAA-7D45-40FA-B4AE-D38418EE25E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BACC2CAA-7D45-40FA-B4AE-D38418EE25E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BACC2CAA-7D45-40FA-B4AE-D38418EE25E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95FE3CFF-3762-4446-8690-EB2BC5321EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95FE3CFF-3762-4446-8690-EB2BC5321EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95FE3CFF-3762-4446-8690-EB2BC5321EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95FE3CFF-3762-4446-8690-EB2BC5321EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1CD672-B9D7-4ECD-8F75-AE6DF259F8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1CD672-B9D7-4ECD-8F75-AE6DF259F8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1CD672-B9D7-4ECD-8F75-AE6DF259F8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1CD672-B9D7-4ECD-8F75-AE6DF259F8F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

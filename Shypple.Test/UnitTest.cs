@@ -12,7 +12,9 @@ namespace Shypple.Test
         [TestMethod]
         public async void Test_GetCheapestDirectSailing()
         {
+            IJsonOperations operations = new JsonOperations();
 
+            var json = operations.ReadJsonAsString(Path);
         }
 
         public void Test_GetCheapestSailingLegs()

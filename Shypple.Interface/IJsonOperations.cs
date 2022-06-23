@@ -10,8 +10,8 @@ namespace Shypple.Interface
     public interface IJsonOperations
     {
         string ReadJsonAsString(string path);
-
         Root GetRootObject(string jsonText);
-        
+        void WriteJson(SailingOutput root, string fileName);
+        void WriteJson(List<SailingOutput> y, string v);
     }
 }
